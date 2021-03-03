@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Final da Venda</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <div class="split left marginLeft">
+            <h3>Dados do Cliente</h3>
+            <label id="clienteNome"></label><br>
+            <label id="clienteCPF"></label><br>
+            <label id="clienteGenero"></label><br>
+            <label id="clienteEndereco"></label><br>
+        </div>
+        <div class="split right marginRight">
+            <table class="table">
+                <thead>
+                <th>Id</th> 
+                <th>Descrição</th> 
+                <th>Quantidade</th> 
+                <th>Desconto</th> 
+                <th>Preço unitário bruto</th>
+                <th>Preço unitário com desconto</th>
+                </thead>
+                <tbody id="tbVendaFinal">
+                </tbody>
+            </table> 
+            <label id="valorTotalB"></label><br>
+            <label id="valorTotalD"></label><br>
+        </div>
+
+    </body>
+    <script src="js/finalVenda.js"></script>
+</html>

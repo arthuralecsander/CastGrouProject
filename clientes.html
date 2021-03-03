@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Clientes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <div class="split left marginLeft">
+            <div>
+                <form onsubmit="registrarCliente(event)">
+                    <label for="fname">Nome Completo:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+
+                    <label for="fcpf">CPF:</label><br>
+                    <input type="number" id="fcpf" name="fcpf"><br>
+
+                    <label for="endereco">Endereco:</label><br>
+                    <input type="text" id="endereco" name="endereco"><br>
+
+                    <label for="genero">Genero:</label><br>
+                    <select name="genero" id="genero">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Nao Definido">Nao Definido</option>
+                    </select><br>
+                    <div style="margin-top: 2%">
+                        <button type="submit" class="btn btn-primary">Registrar</button>
+                    </div>
+                </form>
+                <button class="btn btn-primary" style="margin-top: 2%" id="btnload" onclick="carregarClientes()">
+                    Carregar Lista
+                </button>
+            </div>
+            <div style="margin-top: 2%">
+                <a href="index.html" class="btn btn-secondary">
+                    Voltar
+                </a>
+                <a href="produtos.html" class="btn btn-danger">
+                    Produtos
+                </a>
+                <a href="vendas.html" class="btn btn-warning">
+                    Vendas
+                </a>
+            </div>
+        </div>
+        <div class="split right marginRight"> <!-- Area da tabela -->
+
+            <table class="table">
+                <thead>
+                <th>Nome</th> 
+                <th>CPF</th> 
+                <th>Acoes</th>
+                </thead>
+                <tbody id="tbPessoa">
+                </tbody>
+            </table>
+        </div>
+    </body>
+    <script src="js/clienteScripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</html>
